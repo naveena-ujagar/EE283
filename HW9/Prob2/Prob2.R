@@ -32,6 +32,6 @@
         P4 <- pdf_to_grob(pdf_files[4])
         
         # Create and save the 4-panel figure using grid.arrange
-        tiff(file.path(output_dir, "figure1.tiff"), width = 7, height = 6, units = "in", res=600)
+        png(file.path(output_dir, "figure1.png"), width = 7, height = 6, units = "in", res=600)
         grid.draw(grid.arrange(P3, P2, P1, P4, ncol=2))
         dev.off()
